@@ -31,9 +31,9 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-neutral-100`}
       >
         <CustomProvider>
-          <div className="flex flex-row">
+          <div className="flex flex-row flex-grow">
             <SideBar />
-            {children}
+            <main className="flex-1">{children}</main>
           </div>
         </CustomProvider>
       </body>
