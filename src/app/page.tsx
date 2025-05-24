@@ -1,7 +1,6 @@
 "use client";
 
 import { Button } from "~/components/ui/button";
-import OverView from "./(tabs)/overview/page";
 import { useRouter } from "next/navigation";
 
 export default function Home() {
@@ -13,7 +12,6 @@ export default function Home() {
       {/* Navigate on click */}
       <Button onClick={() => router.push("/overview")}>OverView</Button>
       <Button onClick={() => router.push("/task")}>Task</Button>
-      <OverView />
     </div>
   );
 }
