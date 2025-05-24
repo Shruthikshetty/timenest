@@ -1,13 +1,17 @@
-import { Button } from "~/components/ui/Button";
+"use client";
 
-// thi is the first page of the app
+import { Button } from "~/components/ui/button";
+import { useRouter } from "next/navigation";
+
 export default function Home() {
+  // router from next
+  const router = useRouter();
+
   return (
     <div className="flex-1">
-      <p className="text-red-300 text-6xl w-full mx-auto text-center">
-        This is Next app
-      </p>
-      <Button>Click me</Button>
+      {/* Navigate on click */}
+      <Button onClick={() => router.push("/overview")}>OverView</Button>
+      <Button onClick={() => router.push("/task")}>Task</Button>
     </div>
   );
 }
