@@ -1,8 +1,9 @@
 "use client";
 
-import { Button } from "~/components/ui/button";
+import { Button } from "~/components/button/button";
 import { useRouter } from "next/navigation";
 
+// this is the first screen of the app
 export default function Home() {
   // router from next
   const router = useRouter();
