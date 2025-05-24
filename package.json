@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.2.3",
+    "@reduxjs/toolkit": "^2.8.2",
     "@tanstack/react-query": "^5.77.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
@@ -17,8 +18,10 @@
     "next": "^15.3.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-redux": "^9.2.0",
     "tailwind-merge": "^3.3.0",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "@tanstack/react-query-devtools": "^5.77.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
