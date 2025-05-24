@@ -1,18 +1,25 @@
 "use client";
 
-import { Button } from "~/components/button/button";
-import { useRouter } from "next/navigation";
-
 // this is the first screen of the app
 export default function Home() {
-  // router from next
-  const router = useRouter();
-
   return (
     <div className="flex-1">
-      {/* Navigate on click */}
-      <Button onClick={() => router.push("/overview")}>OverView</Button>
-      <Button onClick={() => router.push("/task")}>Task</Button>
+      {/* this page may not be required */}
+      <p>main content </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe mollitia
+        adipisci eligendi non fugiat, nesciunt quos sint repellat quisquam velit
+        excepturi blanditiis aspernatur harum libero soluta nisi natus voluptas
+        possimus omnis accusamus? Ipsam ut, temporibus corporis labore, nesciunt
+        soluta voluptatum molestias distinctio commodi voluptate iusto
+        molestiae. Vel enim nemo laudantium natus perferendis, modi quibusdam
+        libero doloribus reiciendis accusantium debitis provident voluptates
+        fugit animi quia quasi sint minima ab corrupti sequi iusto iure
+        distinctio. Iusto, nihil saepe consequatur aliquid magnam amet. Dolorum
+        fugit recusandae saepe suscipit tempore cupiditate quaerat ullam iste at
+        ex. Dolore voluptate cumque sunt ipsa reprehenderit voluptatibus
+        deleniti!
+      </p>
     </div>
   );
 }
