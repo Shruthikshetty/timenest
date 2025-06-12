@@ -86,7 +86,7 @@ const Chat = () => {
       socket.off("receive_message");
       socket.disconnect();
     };
-  }, [queryClient, socket, userId]);
+  }, [queryClient, userId]);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
