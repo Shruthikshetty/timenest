@@ -19,6 +19,7 @@ const SideBar = () => {
       {/* Navigate on click */}
       <Button onClick={() => router.push("/overview")}>OverView</Button>
       <Button onClick={() => router.push("/task")}>Task</Button>
+      <Button onClick={() => router.push("/message")}>message</Button>
     </>
   );
 
