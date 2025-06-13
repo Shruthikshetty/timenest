@@ -21,22 +21,13 @@ const Chat = () => {
   const searchParams = useSearchParams();
   const userId = searchParams.get("userId");
 
-  // Get access token from cookies
-  const getAccessToken = () =>
-    document.cookie
-      .split("; ")
-      .find((row) => row.startsWith("accessToken="))
-      ?.split("=")[1];
-
   // Fetch messages
   const { data, isLoading } = useQuery({
     queryKey: ["messages"],
     queryFn: async () => {
-      const accessToken = getAccessToken();
       const res = await axios.get(
         `${process.env.NEXT_PUBLIC_BASE_URL}/api/messages`,
         {
-          headers: { Authorization: `Bearer ${accessToken}` },
           withCredentials: true,
         }
       );
@@ -47,12 +38,10 @@ const Chat = () => {
   // Send message
   const sendMessage = useMutation({
     mutationFn: async (newMessage: string) => {
-      const accessToken = getAccessToken();
       return axios.post(
         `${process.env.NEXT_PUBLIC_BASE_URL}/api/messages`,
         { content: newMessage, receiver: receiverRefId },
         {
-          headers: { Authorization: `Bearer ${accessToken}` },
           withCredentials: true,
         }
       );
